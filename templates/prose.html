@@ -34,12 +34,6 @@
       <article class="prose" data-backlink-icon="{{ backlink_icon }}">
         {{ section.content | safe }}
       </article>
-
-      {% if section.extra.comment is defined %}{% set show_comment = section.extra.comment %}{% else %}{% set show_comment = config.extra.comment %}{% endif %}
-      {% if show_comment %}
-      <div class="giscus"></div>
-      {% include "_giscus_script.html" %}
-      {% endif %}
     </div>
 
     {% include "_footer.html" %}

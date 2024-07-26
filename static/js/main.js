@@ -7,19 +7,7 @@ function enableThemeToggle() {
     if (hlLink) hlLink.href = `/hl-${theme}.css`;
     themeToggle.innerHTML = theme == "dark" ? themeToggle.dataset.sunIcon : themeToggle.dataset.moonIcon;
     sessionStorage.setItem("theme", theme);
-    toggleGiscusTheme(theme);
   }
-  function toggleGiscusTheme(theme) {
-    const iframe = document.querySelector('iframe.giscus-frame');
-    if (iframe) iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: `${location.origin}/giscus_${theme}.css` } } }, 'https://giscus.app');
-  }
-  function initGiscusTheme(evt) {
-    if (evt.origin !== 'https://giscus.app') return;
-    if (!(typeof evt.data === 'object' && evt.data.giscus)) return;
-    toggleGiscusTheme(sessionStorage.getItem("theme") || (preferDark.matches ? "dark" : "light"));
-    window.removeEventListener('message', initGiscusTheme);
-  }
-  window.addEventListener('message', initGiscusTheme);
   themeToggle.addEventListener('click', () => toggleTheme(sessionStorage.getItem("theme") == "dark" ? "light" : "dark"));
   preferDark.addEventListener("change", e => toggleTheme(e.matches ? "dark" : "light"));
   if (!sessionStorage.getItem("theme") && preferDark.matches) toggleTheme("dark");
@@ -65,7 +53,7 @@ function enableNavFold() {
   toggler.addEventListener('click', () => {
     if (window.innerWidth < 768 && [...foldItems].every(item => !item.classList.contains('shown'))) return;
     foldItems.forEach(item => item.classList.toggle('shown'));
-  });  
+  });
 }
 
 function enableRssMask() {

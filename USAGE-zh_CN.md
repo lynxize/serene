@@ -98,7 +98,6 @@ lang = 'en'
 math = false
 mermaid = false
 copy = false
-comment = false
 +++
 
 Hi, My name is ....
@@ -212,14 +211,6 @@ Hi, My name is ....
 
 - `outdate_alert_text_before` 和 `outdate_alert_text_after` 是提示的具体内容，分别是在天数之前和之后
 
-### 文章评论
-
-- Serene 支持使用 [Giscus](https://giscus.app) 作为文章评论系统
-
-- 开启此功能需要新建 `myblog/templates/_giscus_script.html` 并将在 Giscus 网站上配置好的 script 放入其中，然后将其中 `data-theme` 的值改为 `https://<your-domain-name>/giscus_light.css`, 将 `<your-domain-name>` 改为你自己的域名，和 `config.toml` 中的 `base_url` 一致
-
-- `config.toml` 中的 `comment = true` 设置所有文章开启评论，可以在文章的 front matter 中 `[extra]` 下设置 `comment = false` 控制单篇文章是否显示评论
-
 ### Analytics
 
 - 如需放置 Analytics 工具（如 Google Analytics、Umami 等）的脚本，可以新建 `myblog/templates/_head_extend.html` 并将相应内容放入其中，该文件的内容将被添加到每个页面的 html head 中
@@ -269,7 +260,6 @@ Hi, My name is ....
   [extra]
   lang = "en"
   toc = true
-  comment = true
   copy = true
   math = false
   mermaid = false
