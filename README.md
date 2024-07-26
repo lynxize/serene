@@ -1,25 +1,9 @@
-<img width="1501" alt="screenshot" src="https://github.com/isunjn/serene/assets/60461730/61b9ff3d-6ed3-4062-8872-1f3a3d9b60a7">
+Fork of the [serene](https://github.com/isunjn/serene) theme for [zola](https://www.getzola.org/), with features I will never use torn out.  
+<br>
+(You should probably just use normal serene instead)
 
-<br />
-<br />
-
-A blog theme for [zola](https://www.getzola.org), simple and clean
-
-## Demo
-
--  <https://serene-demo.pages.dev>
-
-## Features
-
-- A spiffy design, well crafted
-- Projects page
-- Dark mode
-- Image zooming
-- Sticky table-of-contents
-- Callout (note, warning, alert, etc.)
-- Mathematical notations using [KaTeX](https://katex.org) or [Typst](https://typst.app)
-
-## Usage
-
-- Check the [USAGE.md](https://github.com/isunjn/serene/blob/latest/USAGE.md) of `latest` branch
-- Also available in Simplified Chinese: [USAGE-zh_CN.md](https://github.com/isunjn/serene/blob/latest/USAGE-zh_CN.md) (简体中文)
+## Anti-Features
+- Removed mermaid support for diagrams
+- Removed typst math rendering
+- Removed out-of-date alerts
+- Removed giscus comments
