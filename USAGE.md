@@ -204,14 +204,6 @@ Now the myblog directory may looks like this:
   ]
   ```
 
-### Outdated alert
-
-- If one of your posts has strong timeliness, you can set an outdated alert to be displayed on the page after certain days
-
-- `outdate_alert` and `outdate_alert_days` in `config.toml` set the default whether to be outdated and how many days to be outdated. These two can also be configured on a separate post, you can set `outdate_alert` in `config.toml` to `false`, and then enable it separately in the front matter of time-sensitive posts
-
-- `outdate_alert_text_before` and `outdate_alert_text_after` are the specific content of the alert, before and after the number of days respectively
-
 ### Analytics
 
 - To place scripts for analytics tools (such as Google Analytics, Umami, etc.), you can create a new `myblog/templates/_head_extend.html` and put the corresponding content in it. The content of this file will be added to the html head of each page
@@ -263,8 +255,6 @@ Now the myblog directory may looks like this:
   copy = true
   math = false
   mermaid = false
-  outdate_alert = true
-  outdate_alert_days = 120
   display_tags = true
   truncate_summary = false
   featured = false

@@ -85,21 +85,6 @@ function enableRssMask() {
   copyBtn.addEventListener('click', copy);
 }
 
-function enableOutdateAlert() {
-  const alert = document.querySelector('#outdate_alert');
-  if (!alert) return;
-  const publish = document.querySelector('#publish');
-  const updated = document.querySelector('#updated');
-  const updateDate = new Date(updated ? updated.textContent : publish.textContent);
-  const intervalDays = Math.floor((Date.now() - updateDate.getTime()) / (24 * 60 * 60 * 1000));
-  const alertDays = parseInt(alert.dataset.days);
-  if (intervalDays >= alertDays) {
-    const msg = alert.dataset.alertTextBefore + intervalDays + alert.dataset.alertTextAfter;
-    alert.querySelector('.content').textContent = msg;
-    alert.classList.remove('hidden');
-  }
-}
-
 function enableTocToggle() {
   const tocToggle = document.querySelector('#toc-toggle');
   if (!tocToggle) return;
@@ -227,7 +212,6 @@ enablePrerender();
 enableNavFold();
 enableRssMask();
 if (document.body.classList.contains('post')) {
-  enableOutdateAlert();
   enableTocToggle();
   enableTocIndicate();
   addBackToTopBtn();

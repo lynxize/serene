@@ -107,21 +107,6 @@
           {% endif %}
         </div>
 
-        {% if page.extra.outdate_alert is defined %}{% set show_outdate_alert = page.extra.outdate_alert %}{% else %}{% set show_outdate_alert = config.extra.outdate_alert %}{% endif %}
-        {% if page.extra.outdate_alert_days is defined %}{% set outdate_alert_days = page.extra.outdate_alert_days %}{% else %}{% set outdate_alert_days = config.extra.outdate_alert_days %}{% endif %}
-
-        {% if show_outdate_alert -%}
-        <blockquote id="outdate_alert" class="callout alert hidden" data-days="{{ outdate_alert_days }}"
-          data-alert-text-before="{{ config.extra.outdate_alert_text_before }}"
-          data-alert-text-after="{{ config.extra.outdate_alert_text_after }}">
-          {% set icon = load_data(path="static/icon/alert.svg") %}
-          <div class="icon">
-            {{ icon | safe }}
-          </div>
-          <div class="content"></div>
-        </blockquote>
-        {% endif %}
-
         {% if page.extra.truncate_summary is defined %}{% set truncate_summary = page.extra.truncate_summary %}{% elif config.extra.truncate_summary is defined %}{% set truncate_summary = config.extra.truncate_summary %}{% else %}{% set truncate_summary = false %}{% endif %}
 
         {% if truncate_summary == true and page.summary %}

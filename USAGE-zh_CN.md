@@ -202,15 +202,7 @@ Hi, My name is ....
     { name = "", url = "" },
   ]
   ```
-
-### 文章过时提示
-
-- 如果你的某篇文章具有较强的时效性，可以设置若干天后在页面上显示一个过时提示
-
-- `config.toml` 中的 `outdate_alert` 和 `outdate_alert_days` 设置默认的是否过时和多少天过时。是否显示过时提示以及过时天数可以在单独的一篇文章上配置，你可以将`config.toml`中的 `outdate_alert` 设置为 `false`，然后在有时效性的文章的 front matter 中单独开启
-
-- `outdate_alert_text_before` 和 `outdate_alert_text_after` 是提示的具体内容，分别是在天数之前和之后
-
+  
 ### Analytics
 
 - 如需放置 Analytics 工具（如 Google Analytics、Umami 等）的脚本，可以新建 `myblog/templates/_head_extend.html` 并将相应内容放入其中，该文件的内容将被添加到每个页面的 html head 中
@@ -263,8 +255,6 @@ Hi, My name is ....
   copy = true
   math = false
   mermaid = false
-  outdate_alert = true
-  outdate_alert_days = 120
   display_tags = true
   truncate_summary = false
   featured = false
