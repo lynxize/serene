@@ -7,3 +7,4 @@ Fork of the [serene](https://github.com/isunjn/serene) theme for [zola](https://
 - Removed typst math rendering
 - Removed out-of-date alerts
 - Removed giscus comments
+- Removed lightense image zoom

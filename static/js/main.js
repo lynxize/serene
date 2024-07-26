@@ -200,10 +200,6 @@ function addFootnoteBacklink() {
   });
 }
 
-function enableImgLightense() {
-  window.addEventListener("load", () => Lightense(".prose img", { background: 'rgba(43, 43, 43, 0.19)' }));
-}
-
 //--------------------------------------------
 
 enableThemeToggle();
@@ -219,5 +215,4 @@ if (document.body.classList.contains('post')) {
 if (document.querySelector('.prose')) {
   addCopyBtns();
   addFootnoteBacklink();
-  enableImgLightense();
 }
