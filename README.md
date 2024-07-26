@@ -18,7 +18,6 @@ A blog theme for [zola](https://www.getzola.org), simple and clean
 - Sticky table-of-contents
 - Callout (note, warning, alert, etc.)
 - Mathematical notations using [KaTeX](https://katex.org) or [Typst](https://typst.app)
-- Diagrams and visualizations using [Mermaid](https://github.com/mermaid-js/mermaid)
 
 ## Usage
 

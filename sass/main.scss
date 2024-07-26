@@ -246,10 +246,6 @@ body::-webkit-scrollbar {
         background-color: var(--highlight-mark-color);
       }
     }
-
-    &.mermaid {
-      border: none;
-    }
   }
 
   pre > code > mark::before {
@@ -439,18 +435,11 @@ body::-webkit-scrollbar {
       margin-left: 0.25em;
     }
   }
-
-  .mermaid {
-    background: #fff;
-  }
 }
 
 body.dark .prose {
   img {
     filter: brightness(var(--dark-mode-img-brightness));
-  }
-  .mermaid {
-    filter: brightness(var(--dark-mode-chart-brightness));
   }
 }
 
@@ -974,10 +963,6 @@ body.post {
         }
       }
     }
-  }
-
-  .mermaid {
-    background: #fff;
   }
 
   aside {

@@ -96,7 +96,6 @@ template = "prose.html"
 [extra]
 lang = 'en'
 math = false
-mermaid = false
 copy = false
 +++
 
@@ -254,7 +253,6 @@ Hi, My name is ....
   toc = true
   copy = true
   math = false
-  mermaid = false
   display_tags = true
   truncate_summary = false
   featured = false
@@ -336,20 +334,6 @@ Hi, My name is ....
 - 在文章 front matter 中设置 `math = true` 或 `math = "katex"` 开启 [KaTeX](https://katex.org/) 公式渲染。使用 `$...$` 标记行内公式，`$$...$$` 标记块级公式。
 
 - 设置`math = "typst"` 开启 [Typst](https://typst.app/) 公式渲染. 使用 `$...$` 标记行内公式，`$ ... $` ($内侧两端加空格)标记块级公式。
-
-### Mermaid
-
-- 在文章 front matter 中设置 `mermaid = true` 开启 [Mermaid](https://github.com/mermaid-js/mermaid) 支持，然后用如下格式插入图表：
-
-  ```md
-  {% mermaid() %}
-  flowchart LR
-  A[Hard] -->|Text| B(Round)
-  B --> C{Decision}
-  C -->|One| D[Result 1]
-  C -->|Two| E[Result 2]
-  {% end %}
-  ```
 
 ## 构建部署
 

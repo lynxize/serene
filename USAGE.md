@@ -95,7 +95,6 @@ insert_anchor_links = "none"
 [extra]
 lang = 'en'
 math = false
-mermaid = false
 copy = false
 +++
 
@@ -254,7 +253,6 @@ Now the myblog directory may looks like this:
   toc = true
   copy = true
   math = false
-  mermaid = false
   display_tags = true
   truncate_summary = false
   featured = false
@@ -334,20 +332,6 @@ Now the myblog directory may looks like this:
 - Set `math = true` or `math = "katex"`in the front matter to enable formula rending with [KaTeX](https://katex.org/): `$...$` for inline formula, `$$...$$` for block-level formula.
 
 - Set `math = "typst"` to enable formula rendering with [Typst](https://typst.app/): `$...$` for inline formula, `$ ... $` (insert space at start and end) for block-level formula.
-
-### Mermaid
-
-- Set `mermaid = true` in the front matter to enable [Mermaid](https://github.com/mermaid-js/mermaid) support, and then insert a chart in the following format:
-
-  ```md
-  {% mermaid() %}
-  flowchart LR
-  A[Hard] -->|Text| B(Round)
-  B --> C{Decision}
-  C -->|One| D[Result 1]
-  C -->|Two| E[Result 2]
-  {% end %}
-  ```
 
 ## Build & Deploy
 
